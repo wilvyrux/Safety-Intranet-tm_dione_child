@@ -1,0 +1,136 @@
+@mixin color-gradient {
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+58&0+0,0.65+58 */
+background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 58%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 58%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 58%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+
+
+}
+
+
+.text-image-wrapper {
+    margin-bottom: 25px;
+    position: relative;
+    
+    .text-image-holder {
+        position: relative;
+        overflow: hidden;
+        background: $color-black;
+        
+        
+        &:before {
+            content: '';
+            width: 95%;
+            height: 94%;
+            border: 2px solid #fff;
+            position: absolute;
+            z-index: 2;
+            left: 0;
+            top: 0;
+            margin: auto;
+            right: 0;
+            bottom: 0;
+        }
+        
+        div {
+            
+            
+                img {
+//                    width:100px;
+                }
+            
+                padding: 0 !important;
+                
+                a {
+                    display: block;
+                    font-size: 1.4em;
+                    margin-bottom: 10px;
+                    color:$color-white;
+                    margin-top: 5px;
+                    font-weight: $medium;
+                    text-decoration: none;
+                    
+                    &:hover {
+                        color: $color-secondary;
+                    }
+                }
+                
+        }
+        
+        
+        .text-content-description {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+//            @include t-black(.8);
+            width: 100%;
+            padding: 30px !important;
+            text-align: left;
+            z-index: 4;
+            
+           @include transform_translate(0,40%);
+            
+            h2 {
+                font-size: 1.2em;
+                margin: 0;
+                padding: 0;
+                text-transform: uppercase;
+                color: $color-primary;
+                font-weight: $bold;
+                line-height: 24px;
+            }
+            
+            .description-content {
+                color: $color-white;
+                margin-bottom: 15px;
+                line-height: 15px;
+                font-size: .8em;
+            }
+            
+            
+        }
+        
+        &:hover {
+            .text-content-description {
+                @include transform_translate(0,0%);
+                cursor: pointer;
+            }
+            
+            img {
+                opacity: .5;
+            }
+        }
+        
+        
+        &::after {
+            display: block;
+            clear: both;
+            content: '';
+        }
+        
+        
+        
+    }
+    
+
+    
+}
+
+    
+.vc_col-sm-3 {
+    
+    .text-image-wrapper {
+
+        .text-image-holder {
+
+            h4 {
+                font-size: 1.3em;
+            }
+
+        }
+        
+    }
+
+}
+    

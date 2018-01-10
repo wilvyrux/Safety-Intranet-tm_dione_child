@@ -1,0 +1,141 @@
+/***********************/
+/***********************/
+/***
+Date Employed : Sept 06, 2013
+UI-UX Designs & Front-end Developer: William L. Carrasca Jr.
+Company: Enggware LTD under Enggsol Engineering Solution
+Email: william@enggware.com | williamenggware@gmail.com
+Contacts: +639212632325
+Skype: williamcarrascajr
+ ***/
+/***********************************************************************/
+/***********************************************************************/
+* {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+
+#login_error {
+  background: transparent !important;
+  color: #4caf50 !important;
+  border: 0 !important;
+  text-align: center;
+  font-size: 1.2em; }
+
+body.login {
+  background: url("../custom-php/background.jpg") no-repeat !important;
+  background-size: cover !important; }
+  @media only screen and (max-height: 600px) {
+    body.login {
+      background-size: inherit !important; } }
+  body.login::before {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: rgba(0, 0, 0, 0.8); }
+
+#login {
+  width: 40%;
+  padding: 0;
+  height: 350px;
+  position: absolute;
+  top: 15%;
+  margin: auto;
+  left: 0;
+  right: 0; }
+  @media only screen and (max-width: 800px) {
+    #login {
+      top: 0;
+      height: auto; } }
+  #login h1 {
+    width: 100%;
+    height: 130px;
+    background: url("../custom-php/logo.png") no-repeat center;
+    margin-bottom: 30px;
+    background-size: 80%; }
+    #login h1 a {
+      display: none; }
+  #login form {
+    background: transparent !important;
+    background: transparent;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border: 0;
+    text-shadow: none;
+    margin: 0;
+    padding: 0; }
+    #login form label {
+      font-size: 20px;
+      display: block !important;
+      text-align: center;
+      color: #fff;
+      margin-bottom: 15px; }
+      @media only screen and (max-width: 800px) {
+        #login form label {
+          font-size: 1em; } }
+    #login form input[type="text"],
+    #login form input[type="password"] {
+      background: transparent;
+      -webkit-box-shadow: none;
+              box-shadow: none;
+      border: 0;
+      text-shadow: none;
+      border-bottom: 3px solid #fff;
+      color: #color1;
+      text-align: center;
+      padding-bottom: 5px;
+      color: #f36a22; }
+      #login form input[type="text"]:focus,
+      #login form input[type="password"]:focus {
+        color: #f36a22;
+        outline: 0; }
+      #login form input[type="text"]:hover,
+      #login form input[type="password"]:hover {
+        color: #b7460b;
+        outline: 0;
+        border-bottom: 3px solid #b7460b; }
+    #login form p.forgetmenot {
+      display: block;
+      width: 100%; }
+      #login form p.forgetmenot label {
+        font-size: 12px; }
+    #login form p.submit {
+      display: block;
+      width: 100%;
+      float: left;
+      margin-top: 12px !important; }
+      #login form p.submit input {
+        width: 100%;
+        padding: 10px !important;
+        height: auto !important;
+        background: transparent;
+        -webkit-box-shadow: none;
+                box-shadow: none;
+        border: 0;
+        text-shadow: none;
+        background: #f36a22;
+        color: #fff;
+        text-transform: uppercase;
+        border-radius: 10px; }
+        #login form p.submit input:hover {
+          background: #b7460b; }
+  #login p#nav {
+    text-align: center !important; }
+    #login p#nav a {
+      color: #fff; }
+      #login p#nav a:hover {
+        color: #b7460b; }
+  #login p#backtoblog {
+    text-align: center; }
+    #login p#backtoblog a {
+      color: #fff; }
+      #login p#backtoblog a:hover {
+        color: #b7460b; }
+
+@media only screen and (max-width: 768px) {
+  #login {
+    width: 90%; }
+    #login h1 {
+      background-size: 70% !important; }
+    #login::before {
+      display: none; } }

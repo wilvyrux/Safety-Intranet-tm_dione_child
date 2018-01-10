@@ -1,0 +1,140 @@
+
+//SUBPAGE BANNER
+.page-big-title,
+.page-header
+
+{
+    height: 200px;
+    position: relative;
+//    border-bottom: 2px solid $color-primary;
+    margin-top: -2px !important;
+    margin-bottom: 50px !important;
+
+
+    @media only screen and (max-width:800px) {
+        height: 250px;
+        background-size: cover;
+        background-position: center;
+    }
+
+
+    &:before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        @include t-color(243,106,34,.9);
+    }
+
+    .container {
+        margin: auto;
+        left: 0;
+        right: 0;
+        bottom: 35px;
+        height: 100px;
+        position: absolute;
+
+        .row  {
+
+            h3,
+            h2
+
+            {
+                font-family: $font-primary;
+                text-transform: uppercase;
+                font-size: 3em;
+                position: relative;
+//                bottom: 20px !important;
+                left: 0;
+                padding: 0;
+
+                &:before {
+                    position: absolute;
+//                    top: -10px;
+//                    width: 250px;
+//                    height: 3px;  
+                    width: 0;
+                    height: 0;
+                    background: transparent;
+                    content: '';
+                    left: 20px;
+                    bottom: -60px;
+                    border-bottom: 30px solid $color-white;
+                    border-right: 30px solid transparent;
+                    border-left: 30px solid transparent;
+                    
+                    
+                }
+
+
+                @media only screen and (max-width:800px) {
+                    font-size: 2em;
+                    left: 5%;
+                }
+
+
+            }
+
+            .breadcrumb.media-middle {
+                position: absolute;
+                bottom: 0;
+                background: $color-primary;
+                width: 100% !important;
+                max-width: 100%;
+                padding: 15px !important;
+                border-radius: 0;
+                margin: 0;
+                color: $color-darkorange;
+
+//                display: none;
+
+                > span {
+
+                    a {
+                        color: $color-white;
+                        text-decoration: none;
+                    }
+
+                    color: $color-darkorange;
+                    text-transform: uppercase;
+                }
+            }
+
+
+
+        }
+
+    }
+
+}
+
+
+.page-id-3422,
+.page-id-3811,
+.single-forbes_branches
+{
+
+    .page-big-title,
+    .page-header
+
+    {
+        &:before {
+            @include t-black(.2);
+        }
+    }
+
+}
+
+
+
+header {
+    background: $color-gray2;
+    border: 0 !important;
+    
+    .search-icon.pull-right {
+        i {
+            color: $color-white;
+        }
+    }
+    
+}

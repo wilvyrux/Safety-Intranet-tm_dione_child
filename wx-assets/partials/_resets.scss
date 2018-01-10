@@ -1,0 +1,280 @@
+
+body {
+    font-family: $font-secondary;
+    font-size: 14px;
+    
+}
+
+
+ul {
+    list-style: none;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+div,
+ul li,
+a {
+//    font-family: $font-secondary;
+    letter-spacing: inherit !important;
+}
+
+
+h1.vc_custom_heading,
+h2.vc_custom_heading,
+h3.vc_custom_heading,
+h4.vc_custom_heading,
+h5.vc_custom_heading
+{
+    font-family: $font-primary;
+    
+}
+
+p {
+    font-family: $font-secondary;
+    color: $color-secondary;
+}
+
+.rounded {
+    @include border-radius(7px);
+}
+
+* {
+    @include transition(.3s);
+}
+
+
+.container {
+    width: 95% !important;
+    max-width: 95% !important;
+}
+
+.padding-reset {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.padding-left-reset {
+    padding-left: 0 !important;
+}
+
+.padding-right-reset {
+    padding-right: 0 !important;
+}
+
+//h2.heading {
+//    font-size: 2.5em;
+//    font-weight: $medium;
+//    text-transform: uppercase;
+//    margin-top: 0;
+//}
+//
+//h3.description {
+//    font-size: 1.8em;
+//    text-transform: uppercase;
+//    border-bottom: 1px solid $color-lightgray;
+//    padding-bottom: 10px;
+//}
+
+
+.border-top {
+    border-top: 10px solid $color-white;
+}
+
+
+.big-text  {
+    p {
+        font-size: 1.3em !important;
+        line-height: 30px; 
+        text-align: center;
+    }
+ 
+}
+
+
+.super-big {
+    p {
+        font-size: 1.8em;
+        text-align: center;
+    }
+}
+
+.white-text {
+    .wx-heading {
+        h1,p {
+            color: $color-white;
+        }
+    }
+    
+    .wpb_wrapper {
+        ul {
+            li {
+                color: $color-white;
+                a {
+                    color: $color-white;
+                }
+            }
+        }
+    }
+    
+    .text-image-wrapper {
+        a,span,div {
+            color: $color-white;
+        }
+    }
+    
+    p {
+        color: $color-white;
+    }
+    
+    h1,h2,h3,h4,h5,strong {
+        color: $color-white; 
+    }
+    
+}
+
+.wpb_gmaps_widget.wpb_content_element {
+    margin-bottom: 0;
+    div {
+        padding: 0;
+    }
+    
+}
+
+.wpb_wrapper {
+   h3 {
+        font-size: 2.5em;
+        text-transform: uppercase;
+        font-family: $font-primary;
+
+    }
+ 
+}
+
+
+
+//MOBILE SPACE
+@media only screen and (max-width:800px) {
+    
+    .vc_empty_space {
+        height: 20px !important;
+    }
+
+    .vc_empty_space.mobile-space {
+        height: 300px !important;
+    }
+      
+}
+
+
+
+
+.mobile-reset-top {
+    
+    > div {
+        @media only screen and (max-width:800px) {
+            margin-top: 0 !important;
+        }
+    }
+  
+    
+}
+
+
+
+.wpb_wrapper {
+    ul {
+        li {
+            position: relative;
+            line-height: 24px;
+            
+            &::before {
+                content: "\f00c";
+                @include fontawesome;
+                position: absolute;
+                left: -20px;
+                top: 3px;
+                color: $color-primary;
+            }
+            
+            ul {
+                li {
+                    &::before {
+                        content: "\f101";
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.border-top {
+    border-top:8px solid $color-white; 
+}
+
+
+
+//SLIDER ARROW
+@media only screen and (max-width:480px) {
+    .tparrows {
+        display: none !important;
+    }
+    
+  
+    
+}
+
+
+@media only screen and (max-width:800px) {
+      
+    .vc_row.wpb_row.mobile-margin,
+    .mobile-margin.wpb_column
+    {
+        margin: 0 !important;
+        padding: 0 !important;
+    } 
+    
+}
+
+
+/*** Oct16 ****/
+.lg-actions .lg-next:before {
+    content: "\f105" !important;
+    display: inline-block;
+    @include fontawesome;
+}
+
+
+.lg-actions .lg-prev:after {
+
+    content: "\f104" !important;
+    display: inline-block;
+    @include fontawesome;
+}
+
+
+.lg-toolbar .lg-download:after {
+
+    content: "\f019" !important;
+    display: inline-block;
+    @include fontawesome; 
+}
+
+
+
+
+
+//RESETS 
+.dwqa-staff {
+    background: $color-primary;
+}
+
+.post-navigation {
+    display: none;
+}

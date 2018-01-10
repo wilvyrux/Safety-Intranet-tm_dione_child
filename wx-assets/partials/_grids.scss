@@ -1,0 +1,19 @@
+.vc_masonry_grid {
+    .news-content {
+        div {
+            margin: 0;
+            color: $color-white;
+        }
+        
+        .vc_gitem-post-data-source-post_title {
+            font-size: 1.2em;
+            font-family: $font-primary;
+            text-transform: uppercase;
+        }
+        
+        .vc_gitem-post-data-source-post_date {
+            font-size: .9em;
+        }
+        
+    }
+}

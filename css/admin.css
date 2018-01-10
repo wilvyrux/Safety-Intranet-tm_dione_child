@@ -1,0 +1,81 @@
+div#wpcontent {
+  background: #f1f1f1; }
+
+#wpwrap {
+  background: #f1f1f1; }
+
+#wpbody .wrap h1 {
+  color: #292929; }
+
+#wpadminbar {
+  background: #a63900; }
+  #wpadminbar ul li#wp-admin-bar-wp-logo {
+    width: 10px;
+    background: #f1f1f1;
+    display: block; }
+    #wpadminbar ul li#wp-admin-bar-wp-logo a {
+      display: none !important; }
+
+#adminmenumain #adminmenuback {
+  background: #292929; }
+
+#adminmenumain #adminmenuwrap, #adminmenumain #adminmenu {
+  background-color: transparent !important; }
+  #adminmenumain #adminmenuwrap div.wp-menu-image::before, #adminmenumain #adminmenu div.wp-menu-image::before {
+    color: #e44f00; }
+  #adminmenumain #adminmenuwrap #adminmenu a::hover, #adminmenumain #adminmenu #adminmenu a::hover {
+    color: #a63900 !important; }
+  #adminmenumain #adminmenuwrap #adminmenu li, #adminmenumain #adminmenu #adminmenu li {
+    border-bottom: 1px solid #3b3a3a; }
+  #adminmenumain #adminmenuwrap #adminmenu li.current > a.menu-top, #adminmenumain #adminmenu #adminmenu li.current > a.menu-top {
+    color: #f1f1f1;
+    background: #e44f00; }
+  #adminmenumain #adminmenuwrap #adminmenu li.current ul.wp-submenu li a, #adminmenumain #adminmenu #adminmenu li.current ul.wp-submenu li a {
+    background: #a63900; }
+
+#adminmenu .wp-submenu a:focus {
+  color: #a63900 !important; }
+
+#adminmenu .wp-submenu a:hover {
+  color: #a63900 !important; }
+
+#adminmenu a:hover {
+  color: #a63900 !important; }
+
+#adminmenu li .menu-top > a:focus {
+  color: #a63900 !important; }
+
+#adminmenu div.wp-menu-image {
+  margin-right: 6px;
+  border-right: 1px solid #3b3a3a; }
+
+#wp-auth-check-wrap #wp-auth-check {
+  left: 0 !important;
+  right: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  margin: auto !important;
+  max-height: auto !important;
+  width: 80% !important; }
+
+div#wpfooter {
+  position: absolute;
+  background: #e44f00;
+  right: 0;
+  width: 350px;
+  left: inherit;
+  height: 20px; }
+  div#wpfooter div, div#wpfooter p {
+    display: none; }
+  div#wpfooter::before {
+    content: 'The Invisible';
+    width: 100%;
+    background: #000;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    padding-top: 10px; }

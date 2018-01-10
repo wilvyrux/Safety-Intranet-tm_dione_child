@@ -1,0 +1,124 @@
+//.apply-button-wrapper {
+//    
+//    text-align: center;
+//    padding: 50px 0;
+//    
+//    button {
+//        background: $color-primary;
+//        color: $color-white;
+//        padding: 10px 40px;
+//        font-weight: $bold;
+//        text-transform: uppercase;
+//        display: inline-block; 
+//        border: 0;
+//        
+//        &:hover {
+//            background: $color-secondary;
+//        }
+//    }
+//    
+//}
+//
+//
+//.ajax-load-more {
+//    margin-top: 40px;
+//    
+//    a {
+//        background: $color-primary;
+//        color: $color-white;
+//        padding: 10px 40px;
+//        font-weight: $bold;
+//        text-transform: uppercase;
+//        display: inline-block; 
+//        border: 0;
+//        
+//        &:hover {
+//            background: $color-secondary;
+//        }
+//    }
+//    
+//}
+
+
+.btn-ask-holder,
+.dwqa-ask-question
+
+{
+    
+    a {
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        padding: 10px;
+        color: $color-white;
+        font-weight: $bold; 
+        background: $color-primary;
+        
+        &:hover {
+            background: $color-secondary;
+        }
+    }
+    
+}
+
+
+
+ .login-submit {
+        input {
+            display: inline-block;
+            padding: 20px;
+            color: $color-white;
+            background: $color-primary;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            
+            &:hover {
+                background: $color-secondary;
+            }
+
+        }
+}
+
+
+.readmore-btn 
+{
+    display: block;
+    background: $color-primary;
+    display: inline-block !important;
+    padding: 5px 10px;
+    font-size: .8em !important;
+    text-transform: uppercase;
+}
+
+
+.btn.btn-info,
+.vc_btn3.vc_btn3-color-warning.vc_btn3-style-modern
+{
+    background: $color-secondary;
+    border: 0;
+    margin-bottom: 10px !important;
+    font-size: .9em;
+    
+    i {
+        margin-right: 5px;
+    }
+}
+
+
+
+a.read-more,
+.dwqa-btn.dwqa-btn-primary
+{
+    
+        display: inline-block !important;
+        padding: 20px;
+        color: $color-white;
+        background: $color-primary;
+        padding: 10px 20px;
+        text-transform: uppercase;
+
+        &:hover {
+            background: $color-secondary;
+        }
+
+}

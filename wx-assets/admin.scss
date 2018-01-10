@@ -1,0 +1,215 @@
+@mixin reset-all {
+    background: transparent;
+    box-shadow: none; 
+    border: 0;
+    text-shadow: none;
+}
+
+
+@mixin reset-space {
+    margin: 0;
+    padding: 0;
+}
+
+
+//COLOR SETS/ 
+$color1: #f1f1f1;
+//TAB COLORS
+$color2: #e44f00;
+$color2-ext: #a63900; 
+ 
+$color3: #000;
+$color4: #3b3a3a;
+$color5: #292929;
+
+
+div#wpcontent {
+//    background: #f1f1f1;
+    background: $color1;
+}
+#wpwrap {
+//    background: #f1f1f1;
+    background: $color1;
+}
+
+#wpbody {
+    
+    .wrap {
+        h1 {
+            color:$color5;
+        }
+    }
+}
+
+
+#wpadminbar {
+    background: $color2-ext;
+    
+    ul {
+        
+        li#wp-admin-bar-wp-logo {
+            width: 10px;
+            background: $color1;
+            display: block;
+         
+             a {
+                 display: none !important;
+             }
+            
+        }
+        
+    }
+    
+ 
+    
+}
+
+
+
+
+#adminmenumain {
+    
+    #adminmenuback {
+        background: $color5;
+    }
+    
+    #adminmenuwrap,#adminmenu  {
+        background-color: transparent !important;
+        
+        
+        div.wp-menu-image {
+            
+            &::before {
+                color: $color2;
+            }
+        }
+        
+        #adminmenu {
+            
+            a {
+                
+                &::hover {
+                    color:$color2-ext !important;
+                }
+                
+            }
+            
+            li {
+                border-bottom: 1px solid $color4;
+            }
+            
+            
+            li.current {
+                
+                > a.menu-top {
+                    color:$color1;
+                    background: $color2;
+                }
+                
+//                SUB
+                ul.wp-submenu {
+                    
+                    li {
+                        a {
+                            background: $color2-ext;
+                        }
+                    }
+                }
+                
+                
+                
+            } 
+            
+        }
+        
+    }
+    
+    
+}
+
+
+
+#adminmenu {
+    .wp-submenu {
+        a:focus {
+            color:$color2-ext !important;
+        }
+        
+        a:hover {
+            color:$color2-ext !important;
+        }
+        
+    }
+    
+    a {
+        &:hover {
+            color:$color2-ext !important;
+        }
+    }
+    
+    
+    li {
+        .menu-top {
+            >a {
+                &:focus {
+                    color:$color2-ext !important;  
+                }
+            }
+        }
+    }
+    
+    
+    
+    div.wp-menu-image {
+        margin-right: 6px;
+        border-right: 1px solid $color4;
+    }
+    
+    
+    
+}
+
+
+#wp-auth-check-wrap {
+    
+    #wp-auth-check {
+    left: 0 !important;
+    right: 0 !important;
+    top:0 !important;
+    bottom: 0 !important;
+    margin: auto !important;
+    max-height: auto !important;
+    width: 80% !important;
+    }   
+    
+} 
+
+
+
+
+div#wpfooter {
+    position: absolute;
+    background: $color2;
+    right: 0;
+    width: 350px;
+    left: inherit;
+    height: 20px;
+    
+    div,p {
+        display: none;
+    }
+    
+    &::before {
+        content: 'The Invisible';
+        width: 100%;
+        background: $color3;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+        padding-top: 10px;
+    }
+}

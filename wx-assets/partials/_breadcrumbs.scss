@@ -1,0 +1,16 @@
+.dwqa-breadcrumbs {
+    background: $color-secondary;
+    
+    a {
+        padding: 10px;
+        display: inline-block;
+        color: #fff;
+        
+    }
+    
+    .dwqa-current {
+        color: $color-primary;
+    }
+    
+    
+}

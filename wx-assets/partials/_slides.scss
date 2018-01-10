@@ -1,0 +1,136 @@
+.inner-holder.slick-slide {
+    position: relative;
+}
+
+
+
+.news-slider-wrapper {
+    height: 450px;
+    overflow: hidden;
+    margin: 0 !important;
+
+    .img-holder {
+        height: 450px;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .content-holder {
+        padding: 10px;
+        @include t-black(.8);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 2;
+        padding-bottom: 25px;
+        height: 120px;
+        
+        h4 {
+            font-size: 1em;
+            margin: 0 !important;
+          
+            
+            a {
+                color: $color-primary;
+                text-transform: uppercase !important;
+                display: block;
+                font-size: 1.6em !important;
+                font-weight: $bold;
+                text-decoration: none;
+                
+                &:hover {
+                    color: $color-primary;
+                    opacity: .4;
+                }
+            }
+        }
+        
+        p {
+            color: $color-white;
+            line-height: 14px;
+            font-size: .7em;
+        }
+        
+        .news-date {
+            color: $color-primary;
+            font-size: .9em;
+        }
+    }
+}
+
+
+
+.sliderheight {
+
+    .news-slider-wrapper {
+        height:500px;
+        overflow: hidden;
+        margin: 0 !important;
+
+        .img-holder {
+            height: 500px;
+            background-position: center;
+            background-size: cover;
+        }
+        
+        
+    }
+
+}
+
+
+
+
+ 
+
+.news-slider-navigation {
+    text-align: center;
+    margin-bottom: 20px;
+    
+    a {
+        display: inline-block;
+        color: $color-white; 
+        font-size: 2em;
+        border: 1px solid $color-white; 
+        width: 40px;
+        margin: 4px;
+        cursor: pointer;
+         
+        &:hover {
+            @include t-black(.7);
+            opacity: .7;
+        }
+    }
+}
+
+.owl-controls {
+//    display: none !important;
+}
+
+
+.slick-prev {
+    left: inherit;
+    right: 35px;
+    bottom: 5px;
+//    position: absolute;
+    z-index: 5;
+    top: inherit;
+    
+//     &::before {
+//        content: "\f104" !important;
+//        @include fontawesome;
+//    }
+  
+}
+
+.slick-next {
+    right: 15px !important;
+    bottom: 5px !important;
+    top: inherit;
+    
+//    &::before {
+//        content: "\f105" !important;
+//        @include fontawesome;
+//    }
+}

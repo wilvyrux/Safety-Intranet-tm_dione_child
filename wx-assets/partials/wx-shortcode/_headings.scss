@@ -1,0 +1,165 @@
+
+//****************************
+//HEADINGS
+//****************************
+
+//HEADING STYLE 1
+.wx-heading {
+    text-decoration: none !important;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    @media only screen and (max-width: 1000px) {
+      margin-bottom: 10px;
+    }
+
+
+    .image {
+        width: 200px;
+        margin: auto;
+    }
+
+    .primary-heading,
+    .secondary-heading,
+    .third-heading,
+    .fourth-heading
+    {
+
+        display: inline-block;
+//        font-size:3.063em;
+        margin: 0;
+        text-transform: uppercase;
+        font-family: $font-primary;
+        //        color: $color-dark;
+//        font-weight: $bold;
+        position: relative;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            height: 21px;
+            width: 114px;
+            bottom: -25px;
+            /* margin-right: 15px; */
+            /* margin-bottom: -20px; */
+            margin: auto !important;
+
+            right: 0;
+            left: 0;
+            position: absolute;
+
+        }
+
+
+
+    }
+
+
+
+
+    .primary-heading {
+        font-size: 2.5em;
+        text-transform: uppercase;
+
+//        &::before {
+//             background: url('../custom-php/sprite.jpg')no-repeat;
+//        }
+    }
+
+
+    .secondary-heading {
+        font-size: 2.5em;
+        text-transform: uppercase;
+        font-weight: $medium;
+        color: $color-primary;
+
+
+        &::before {
+           display: none;
+        }
+    }
+
+    .third-heading {
+        font-size: 1.3em;
+        text-transform: capitalize;
+        font-weight: $medium;
+        color: $color-white;
+        font-family: $font-secondary;
+
+    }
+
+
+    .fourth-heading {
+        color: $color-white;
+        font-size: 3.5em;
+        margin-bottom: 25px;
+
+
+    }
+
+
+    .heading-subtitle,p {
+        width: 80%;
+        margin: auto;
+        font-weight: $light;
+        font-style: italic;
+        font-size: 1.1em;
+    }
+
+    .image {
+        img {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+    }
+
+
+
+}
+
+.no-subtitle {
+    .heading-subtitle,p {
+            display: none;
+    }
+}
+
+
+.wx-heading.align-left {
+    .heading-subtitle {
+        text-align: left;
+        width: 100%;
+        font-size: 1.3em;
+//        font-weight: $bold;
+        letter-spacing: inherit;
+        text-transform: capitalize;
+        font-family: $font-secondary;
+        font-style: normal;
+        line-height: 24px;
+    }
+}
+
+.with-subtitle {
+    .heading-subtitle,p{
+        display: none;
+    }
+
+}
+
+
+
+  @media only screen and (max-width:800px) {
+
+         .wx-heading {
+                .primary-heading,
+                .secondary-heading,
+                .third-heading,
+                .fourth-heading
+                {
+                    font-size: 1.5em !important;
+                    margin-bottom: 10px;
+                }
+         }
+
+
+    }

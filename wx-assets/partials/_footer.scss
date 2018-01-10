@@ -1,0 +1,39 @@
+.copyright  {
+    background: $color-gray2;
+
+
+}
+
+
+
+.site-footer {
+    padding: 50px 0;
+    
+    .widget-title {
+        display: block;
+        margin: 0;
+        font-size: 1.8em;   
+        font-family: $font-primary;
+    }
+    
+    ul {
+        li {
+            a {
+                text-decoration: none;
+                text-transform: uppercase;
+                &:hover {
+                    color: $color-primary;
+                }
+                
+                &:before {
+                    content: "\f105";
+                     @include fontawesome;
+                     margin-right: 5px;
+                     display: inline-block;
+                     color: $color-primary;
+                }
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,52 @@
+/******************CSS INJECTION IT TECH
+ ***********************/
+/***
+Date : May 25, 2016
+Web Designer: William L. Carrasca Jr.
+Company: Enggware LTD under Enggsol Engineering Solution
+Email: william@enggware.com 
+Contacts: +639212632325
+Skype: williamcarrascajr
+ ***/                             
+
+
+//animations
+@import "animations/hover"; 
+
+
+// Modules and Variables
+@import "modules/mixin";
+@import "modules/colors";
+@import "modules/typography";
+
+
+
+// Partials
+@import "partials/resets";
+@import "partials/buttons";
+@import "partials/grids";
+@import "partials/header";
+@import "partials/footer";
+@import "partials/sidebar";
+@import "partials/forms";
+@import "partials/pages";
+@import "partials/slides";
+@import "partials/modal";  
+@import "partials/category";  
+@import "partials/singlepage";  
+@import "partials/accordion";  
+@import "partials/extensions";   
+@import "partials/filters";   
+@import "partials/breadcrumbs";   
+
+@import "partials/wx-shortcode/allwxshortcodes";  
+
+
+
+
+// ...
+
+// Third-party
+//
+//@import "vendor/colorpicker";
+//@import "vendor/jquery.ui.core";

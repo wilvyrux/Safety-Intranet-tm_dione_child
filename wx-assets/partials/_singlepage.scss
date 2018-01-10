@@ -1,0 +1,47 @@
+.dwqa-single-question {
+    
+    margin-bottom: 50px;
+    
+    .dwqa-question-actions {
+        outline: 1px solid #f00; 
+        padding: 5px;
+        background: $color-primary;
+    }
+    
+}
+
+
+.single  {
+    .site-content {
+        padding-bottom: 50px;
+    }
+}
+    
+.search-results {
+    .breadcrumb {
+        display: none;
+    }
+    
+    
+    
+    .list-blog-wrapper {
+        .postcontent-grid {
+            padding: 10px !important;
+            
+            a,h5,p, div {
+                margin: 0;
+                display:block;
+            }
+            
+            a {
+                text-decoration: none;
+            }
+            
+            .blog-entry-meta {
+                display: none;
+            }
+            
+        }
+    }
+    
+}

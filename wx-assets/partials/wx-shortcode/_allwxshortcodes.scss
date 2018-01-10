@@ -1,0 +1,34 @@
+
+
+//center shortcodes
+.wx-heading.align-left,
+.wx-button.align-left 
+{
+    text-align: left;
+} 
+
+.wx-heading.align-center, 
+.wx-button.align-center 
+{
+    text-align: center;
+} 
+
+.wx-heading.align-right,
+.wx-button.align-right 
+{
+    text-align: right;
+} 
+
+//font used
+$font-select:$font-primary;
+
+
+
+//RESPONSIVE SIZE STARTS HERE
+@import "headings";
+@import "buttons"; 
+@import "thumbnailwtext";   
+@import "details";     
+ 
+
+

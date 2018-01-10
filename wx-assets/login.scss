@@ -1,0 +1,256 @@
+/***********************/
+//LOGIN CUSTOM - WILVYRUX  - STYLE 1
+ /***********************/
+/***
+Date Employed : Sept 06, 2013
+UI-UX Designs & Front-end Developer: William L. Carrasca Jr.
+Company: Enggware LTD under Enggsol Engineering Solution
+Email: william@enggware.com | williamenggware@gmail.com
+Contacts: +639212632325
+Skype: williamcarrascajr
+ ***/ 
+
+
+/***********************************************************************/
+
+//CHANGE THIS COLORS 
+$color1: #fff;
+//TAB COLORS
+$color2: #f36a22;
+//HOVER TEXT COLOR
+$color2-ext: #b7460b;   
+//BACKGROUND OVERLAY COLOR
+$transparent:rgba(0,0,0,.8);
+
+//ERROR BACKGROUND
+$error-background: transparent ;
+$error-color:#4caf50;
+
+//BACKGROUND & LOGO
+$background:  url('../custom-php/background.jpg')no-repeat;
+$logo: url('../custom-php/logo.png')no-repeat center;
+
+/***********************************************************************/
+
+
+* {
+    -webkit-transition: all 0.3s ease;
+-moz-transition: all 0.3s ease;
+-ms-transition: all 0.3s ease;
+-o-transition: all 0.3s ease;
+transition: all 0.3s ease;
+}
+
+@mixin reset-all {
+    background: transparent;
+    box-shadow: none; 
+    border: 0;
+    text-shadow: none;
+}
+
+@mixin reset-space {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin border($value:100px) {
+    -webkit-border-radius: $value;
+    border-radius: $value;
+}
+
+
+#login_error {
+    background: $error-background !important;
+    color: $error-color !important;
+    border: 0 !important;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+
+
+body.login {
+    background:$background !important;
+    background-size:cover !important; 
+    
+    @media only screen and (max-height:600px) {
+        background-size:inherit !important;  
+    }
+    
+    &::before {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background:$transparent;
+    }
+    
+}
+
+
+#login {
+    
+    width:40%;
+    padding:0;
+    height: 350px;
+    position: absolute;
+    top: 15%;
+//    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+    
+    
+    @media only screen and (max-width:800px) {
+        top: 0;
+        height: auto;
+    }
+    
+    
+    h1 {
+        width: 100%;
+        height: 130px;
+        background:$logo;
+        margin-bottom: 30px;
+        background-size:80%; 
+        
+        a {
+        display: none;
+        }
+        
+    }
+    
+    
+    
+    form {
+        background: transparent !important;
+        @include reset-all; 
+        @include reset-space;
+        
+        
+        label {
+            font-size: 20px;
+            display: block !important;
+            text-align: center;
+            color:$color1;
+            margin-bottom: 15px;
+            
+            @media only screen and (max-width:800px) {
+                font-size: 1em;     
+            }
+            
+            
+           
+        }
+        
+        input[type="text"],
+        input[type="password"]  { 
+            @include reset-all;
+            border-bottom: 3px solid $color1;
+            color: #color1;
+            text-align: center;
+            padding-bottom: 5px;
+            color:$color2;
+            
+            &:focus {
+            color:$color2;
+            outline:0;
+            }
+          
+            &:hover {
+            color:$color2-ext;
+            outline:0;
+            border-bottom:3px solid $color2-ext;
+                
+            }
+            
+        }
+        
+        p.forgetmenot {
+            display: block;
+            width: 100%;
+            
+            label {
+                font-size: 12px;
+            }
+        }
+       
+        
+//        BUTTONS
+        p.submit {
+            display: block;
+            width: 100%;
+            float: left;
+            margin-top: 12px !important;
+            
+            input {
+                width: 100%;
+                padding: 10px !important;
+                height: auto !important;
+                @include reset-all;
+                background: $color2;
+                color:$color1;
+                text-transform: uppercase;
+                @include border(10px);
+                
+                &:hover {
+                    background: $color2-ext;
+                }
+                
+                
+                
+            }
+            
+        }
+        
+       
+        
+    }
+    
+    p#nav {
+        text-align: center !important;
+        
+        a {
+            color:$color1;
+            
+            &:hover {
+                color: $color2-ext;
+            }
+            
+        }
+    }
+    
+    p#backtoblog {
+        text-align: center;
+        
+        a {
+            color:$color1;
+            
+            &:hover {
+                color: $color2-ext;
+            }
+        }
+    }
+    
+    
+}
+
+
+
+
+@media only screen and (max-width:768px) {
+   
+    #login {
+        width:90%;
+        
+        h1 {
+            background-size:70% !important; 
+        }
+        
+        &::before {
+            display: none;
+        }
+    }
+}
+
+

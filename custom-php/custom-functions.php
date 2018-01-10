@@ -24,4 +24,6 @@ require_once get_theme_file_path() . '/custom-php/wx_custom-shortcodes.php';
 
 /*<----//  //---->*/
 
+require_once get_theme_file_path() . '/custom-php/rty_functions.php';
+
 ?>

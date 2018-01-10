@@ -175,3 +175,25 @@
 .cal-modal-thumb img {
   display: block;
 }
+
+/*File Manager*/
+#folder-file-container {
+    .file-container {
+        .file-element {
+            text-align: center;
+
+            .file-icon {
+                .fa {
+                    font-size: 30px;
+                }
+            }
+            .file-name {
+                font-weight: 400;
+            }
+        }
+        .action,
+        .status {
+            text-align: center;
+        }
+    }
+}

@@ -49,7 +49,7 @@ if ( $header_wide_boxed == 'boxed' ) {
 					</div>
 				</div>
 				<!-- /.mobile-menu-btn -->
-				<div class="col-xs-4 col-md-2 text-xs-center text-md-left logo">
+				<div class="col-xs-4 col-md-3 text-xs-center text-md-left logo">
 					<?php
 					$logo = tm_get_logo();
 					if ( $logo ) { ?>
@@ -63,7 +63,7 @@ if ( $header_wide_boxed == 'boxed' ) {
 					<?php } ?>
 				</div>
 
-				<div class="col-sm-8 text-center hidden-sm-down">
+				<div class="col-sm-8 text-right hidden-sm-down">
 					<?php if($hide_main_nav != 1): ?>
 						<!-- PRIMARY-MENU -->
 						<nav id="site-navigation" class="main-navigation">
@@ -88,7 +88,7 @@ if ( $header_wide_boxed == 'boxed' ) {
 					<?php endif; ?>
 				</div>
 
-				<div class="col-xs-4 col-md-2">
+				<div class="col-xs-4 col-md-1">
 
 
 					<?php if($sidemenu_enable == 1): ?>

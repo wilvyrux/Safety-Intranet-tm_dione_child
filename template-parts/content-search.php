@@ -4,7 +4,7 @@ $tm_dione_blog_hide_author = Kirki::get_option( 'tm-dione', 'blog_hide_author' )
 $tm_dione_post_hide_featured_image = get_post_meta( get_the_ID(), "post_hide_featured_image", true );
 
 if($tm_dione_list_boxed == 1) {
-	$class = 'col-sm-6';
+	$class = 'col-sm-4';
 }
 else {
 	$class = 'col-sm-6 col-md-4';
@@ -103,7 +103,7 @@ else {
 		<div class="blog-entry-content">
 			<?php strip_shortcodes(get_the_excerpt()); ?>
 			<p><a class="read-more"
-			   href="<?php echo get_permalink() ?>"><span><?php echo esc_html__( 'Continue Reading', 'tm-dione' ) ?></span></a></p>
+			   href="<?php echo get_permalink() ?>"><span><?php echo esc_html__( 'READMORE', 'tm-dione' ) ?></span></a></p>
 		</div>
 		<?php if ($tm_dione_blog_hide_author != 1 ): ?>
 			<div class="blog-entry-meta">

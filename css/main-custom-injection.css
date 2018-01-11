@@ -5389,8 +5389,14 @@ header {
       padding-right: 20px; }
 
 .banner-sidetab .calendar-upcoming-events {
-  margin: 0 5px;
   background: rgba(255, 255, 255, 0.9); }
+
+.banner-sidetab .mainboxgridbox-style2 > div > div {
+  margin: 0 5px !important;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  overflow: visible;
+  border: 0 !important; }
 
 .wcp-openweather-content-tbl tbody tr .wcp-openweather-city {
   font-family: "Oswald", sans-serif !important;

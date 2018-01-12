@@ -934,6 +934,76 @@
 
 
 
+    //TABLE SECTION
+
+    .jaf-file-table {
+        tr {
+            .file-thumb {
+                width: 40px;
+                display: block;
+                height: 40px;
+                margin: auto;
+                
+                img {
+                    height: 100%;
+                }
+            }
+        }
+        
+        tbody {
+            tr {
+                
+                th,td {
+                    vertical-align: middle;
+                    color: $color-dark;
+                    font-size: .8em;
+                    
+                    a {
+                        display: inline-block;
+                        padding: 5px 10px;
+                        background: $color-secondary;
+                        text-decoration: none;
+                        color: $color-white;
+                        text-transform: uppercase;
+                        font-size: .9em;
+                        
+                        &:hover {
+                            opacity: .6;
+                        }
+                            
+                        &:last-child {
+                            background:$color-primary;
+                        }
+                    }
+                    
+                    &:first-child {
+                        width: 70px;
+                        text-align: center;
+                    }
+                    
+                     &:last-child {
+                        width:auto;
+                         text-align: right;
+                         padding-right: 12px;
+                    }
+                }
+                
+                
+                .download-count {
+                    background: $color-primary;
+                    padding: 2px 5px;
+                    color: $color-white;
+                    font-size: .9em;
+                    
+                }
+                
+                
+            }
+        }
+    }
+
+
+
     .forum-wrapper {
         table {
             tr {

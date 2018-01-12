@@ -125,7 +125,7 @@ a.read-more,
 
 .primary-button {
     background: $color-gray;
-    text-decoration: none;
+    text-decoration: none !important;
     padding: 10px;
     margin: auto;
     display: block;
@@ -135,4 +135,9 @@ a.read-more,
     color: $color-white;
     font-size: .9em;
     font-family: $font-primary;
+    @include border-radius(100px);
+
+    &:hover {
+        opacity: .4;
+    }
 }

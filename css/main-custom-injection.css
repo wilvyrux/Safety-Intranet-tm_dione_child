@@ -4325,7 +4325,7 @@ a.read-more,
 
 .primary-button {
   background: #777474 !important;
-  text-decoration: none;
+  text-decoration: none !important;
   padding: 10px;
   margin: auto;
   display: block;
@@ -4334,7 +4334,11 @@ a.read-more,
   text-transform: uppercase;
   color: #fff !important;
   font-size: .9em;
-  font-family: "Oswald", sans-serif !important; }
+  font-family: "Oswald", sans-serif !important;
+  border-radius: 100px;
+  -moz-border-radius: 100px; }
+  .primary-button:hover {
+    opacity: .4; }
 
 .vc_masonry_grid .news-content div {
   margin: 0;
@@ -5004,6 +5008,41 @@ header {
   .mainboxgridbox-style2 .jaf-file-table tbody tr td a {
     border-radius: 15px;
     -moz-border-radius: 15px; }
+  .mainboxgridbox-style2 .jaf-file-table tr .file-thumb {
+    width: 40px;
+    display: block;
+    height: 40px;
+    margin: auto; }
+    .mainboxgridbox-style2 .jaf-file-table tr .file-thumb img {
+      height: 100%; }
+  .mainboxgridbox-style2 .jaf-file-table tbody tr th, .mainboxgridbox-style2 .jaf-file-table tbody tr td {
+    vertical-align: middle;
+    color: #262626 !important;
+    font-size: .8em; }
+    .mainboxgridbox-style2 .jaf-file-table tbody tr th a, .mainboxgridbox-style2 .jaf-file-table tbody tr td a {
+      display: inline-block;
+      padding: 5px 10px;
+      background: #262626 !important;
+      text-decoration: none;
+      color: #fff !important;
+      text-transform: uppercase;
+      font-size: .9em; }
+      .mainboxgridbox-style2 .jaf-file-table tbody tr th a:hover, .mainboxgridbox-style2 .jaf-file-table tbody tr td a:hover {
+        opacity: .6; }
+      .mainboxgridbox-style2 .jaf-file-table tbody tr th a:last-child, .mainboxgridbox-style2 .jaf-file-table tbody tr td a:last-child {
+        background: #f36a22 !important; }
+    .mainboxgridbox-style2 .jaf-file-table tbody tr th:first-child, .mainboxgridbox-style2 .jaf-file-table tbody tr td:first-child {
+      width: 70px;
+      text-align: center; }
+    .mainboxgridbox-style2 .jaf-file-table tbody tr th:last-child, .mainboxgridbox-style2 .jaf-file-table tbody tr td:last-child {
+      width: auto;
+      text-align: right;
+      padding-right: 12px; }
+  .mainboxgridbox-style2 .jaf-file-table tbody tr .download-count {
+    background: #f36a22 !important;
+    padding: 2px 5px;
+    color: #fff !important;
+    font-size: .9em; }
   .mainboxgridbox-style2 .forum-wrapper table tr {
     border-bottom: 0 !important; }
   .mainboxgridbox-style2 table tr, .mainboxgridbox-style2 table td, .mainboxgridbox-style2 table th, .mainboxgridbox-style2 table th {
@@ -5803,22 +5842,23 @@ header {
 .wx-button.primary-button {
   color: #fff !important;
   background: #f36a22 !important;
-  border-radius: 10px;
-  -moz-border-radius: 10px;
+  border-radius: 100px;
+  -moz-border-radius: 100px;
   display: inline-block;
   padding: 10px 30px;
   text-decoration: none;
   display: block;
-  width: 200px;
+  width: 80%;
   margin: auto;
   text-transform: uppercase;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 20px; }
   .wx-button.primary-button p {
     margin: 0;
     font-weight: 700;
     color: #fff !important; }
   .wx-button.primary-button:hover {
-    opacity: .6; }
+    opacity: .3; }
 
 .wx-button.secondary-button {
   border: transparent;

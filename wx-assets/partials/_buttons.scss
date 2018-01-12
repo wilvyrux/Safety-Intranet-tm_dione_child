@@ -122,3 +122,17 @@ a.read-more,
         }
 
 }
+
+.primary-button {
+    background: $color-gray;
+    text-decoration: none;
+    padding: 10px;
+    margin: auto;
+    display: block;
+    width: 80%;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-white;
+    font-size: .9em;
+    font-family: $font-primary;
+}

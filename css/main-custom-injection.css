@@ -4323,6 +4323,19 @@ a.read-more,
   .dwqa-btn.dwqa-btn-primary:hover {
     background: #262626 !important; }
 
+.primary-button {
+  background: #777474 !important;
+  text-decoration: none;
+  padding: 10px;
+  margin: auto;
+  display: block;
+  width: 80%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff !important;
+  font-size: .9em;
+  font-family: "Oswald", sans-serif !important; }
+
 .vc_masonry_grid .news-content div {
   margin: 0;
   color: #fff !important; }

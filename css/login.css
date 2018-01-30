@@ -16,7 +16,7 @@ Skype: williamcarrascajr
 
 #login_error {
   background: transparent !important;
-  color: #4caf50 !important;
+  color: #f3b50d !important;
   border: 0 !important;
   text-align: center;
   font-size: 1.2em; }
@@ -24,35 +24,47 @@ Skype: williamcarrascajr
 body.login {
   background: url("../custom-php/background.jpg") no-repeat !important;
   background-size: cover !important; }
-  @media only screen and (max-height: 600px) {
-    body.login {
-      background-size: inherit !important; } }
   body.login::before {
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: 100%;
-    content: '';
-    background: rgba(0, 0, 0, 0.8); }
+    content: ''; }
 
 #login {
   width: 40%;
   padding: 0;
-  height: 350px;
+  height: 100%;
   position: absolute;
-  top: 15%;
-  margin: auto;
+  top: 0;
   left: 0;
-  right: 0; }
-  @media only screen and (max-width: 800px) {
-    #login {
-      top: 0;
-      height: auto; } }
+  border-right: 1px dotted #fff;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0 35px; }
+  #login form#loginform {
+    position: relative !important;
+    z-index: 10 !important; }
+  #login:before {
+    position: absolute;
+    width: 95%;
+    height: 97%;
+    border: 1px solid #fff;
+    content: '';
+    left: 0;
+    top: 0;
+    right: 0;
+    margin: auto;
+    bottom: 0;
+    z-index: 1; }
+  #login h1, #login form, #login p#nav {
+    z-index: 2;
+    position: relative; }
   #login h1 {
     width: 100%;
     height: 130px;
-    background: url("../custom-php/logo.png") no-repeat center;
+    background: url("../custom-php/logo.png") no-repeat center !important;
     margin-bottom: 30px;
-    background-size: 80%; }
+    margin-top: 25px;
+    background-size: 70% !important; }
     #login h1 a {
       display: none; }
   #login form {
@@ -65,14 +77,10 @@ body.login {
     margin: 0;
     padding: 0; }
     #login form label {
-      font-size: 20px;
+      font-size: 15px;
       display: block !important;
-      text-align: center;
-      color: #fff;
-      margin-bottom: 15px; }
-      @media only screen and (max-width: 800px) {
-        #login form label {
-          font-size: 1em; } }
+      text-align: left;
+      color: #fff; }
     #login form input[type="text"],
     #login form input[type="password"] {
       background: transparent;
@@ -80,30 +88,35 @@ body.login {
               box-shadow: none;
       border: 0;
       text-shadow: none;
-      border-bottom: 3px solid #fff;
+      border: 2px solid #fff;
       color: #color1;
       text-align: center;
       padding-bottom: 5px;
-      color: #f36a22; }
+      color: #c69000;
+      border-radius: 100px;
+      padding: 20px; }
       #login form input[type="text"]:focus,
       #login form input[type="password"]:focus {
-        color: #f36a22;
-        outline: 0; }
+        color: #c69000;
+        outline: 0;
+        border: 2px solid #c69000; }
       #login form input[type="text"]:hover,
       #login form input[type="password"]:hover {
-        color: #b7460b;
-        outline: 0;
-        border-bottom: 3px solid #b7460b; }
+        color: #c69000;
+        outline: 0; }
     #login form p.forgetmenot {
       display: block;
-      width: 100%; }
+      width: 100%;
+      float: left;
+      width: 50%; }
       #login form p.forgetmenot label {
         font-size: 12px; }
     #login form p.submit {
       display: block;
       width: 100%;
-      float: left;
-      margin-top: 12px !important; }
+      float: right;
+      margin-top: -5px !important;
+      width: 150px; }
       #login form p.submit input {
         width: 100%;
         padding: 10px !important;
@@ -113,24 +126,46 @@ body.login {
                 box-shadow: none;
         border: 0;
         text-shadow: none;
-        background: #f36a22;
+        background: #c69000;
         color: #fff;
         text-transform: uppercase;
-        border-radius: 10px; }
+        border-radius: 100px; }
         #login form p.submit input:hover {
-          background: #b7460b; }
+          background: #02900c; }
   #login p#nav {
-    text-align: center !important; }
+    text-align: left !important;
+    float: left;
+    width: 50%;
+    margin: 10px 0;
+    padding: 0; }
     #login p#nav a {
-      color: #fff; }
+      color: #c69000; }
       #login p#nav a:hover {
-        color: #b7460b; }
+        color: #02900c; }
   #login p#backtoblog {
-    text-align: center; }
+    text-align: center;
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    display: block;
+    margin: 0;
+    padding: 0;
+    display: block; }
     #login p#backtoblog a {
-      color: #fff; }
+      color: #fff;
+      background: #c69000;
+      padding: 10px;
+      display: block;
+      border-radius: 100px; }
       #login p#backtoblog a:hover {
-        color: #b7460b; }
+        background: #02900c; }
+  #login p.message {
+    background: #c69000 !important;
+    border: 0 !important;
+    color: #fff;
+    text-align: center; }
+  #login form#lostpasswordform p {
+    width: 100% !important; }
 
 @media only screen and (max-width: 768px) {
   #login {
@@ -138,4 +173,139 @@ body.login {
     #login h1 {
       background-size: 70% !important; }
     #login::before {
-      display: none; } }
+      display: none; }
+  #login {
+    padding: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-right: 1px dotted #fff;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px; }
+    #login form#loginform {
+      position: relative !important;
+      z-index: 10 !important; }
+    #login:before {
+      position: absolute;
+      width: 95%;
+      height: 97%;
+      border: 1px solid #fff;
+      content: '';
+      left: 0;
+      top: 0;
+      right: 0;
+      margin: auto;
+      bottom: 0;
+      z-index: 1; }
+    #login h1, #login form, #login p#nav {
+      z-index: 2;
+      position: relative; }
+    #login h1 {
+      width: 100%;
+      height: 80px;
+      background: url("../custom-php/logo.png") no-repeat center !important;
+      margin-bottom: 0;
+      margin-top: 25px;
+      background-size: contain !important; }
+      #login h1 a {
+        display: none; }
+    #login form {
+      background: transparent !important;
+      background: transparent;
+      -webkit-box-shadow: none;
+              box-shadow: none;
+      border: 0;
+      text-shadow: none;
+      margin: 0;
+      padding: 0; }
+      #login form label {
+        font-size: 15px;
+        display: block !important;
+        text-align: left;
+        color: #fff; }
+      #login form input[type="text"],
+      #login form input[type="password"] {
+        background: transparent;
+        -webkit-box-shadow: none;
+                box-shadow: none;
+        border: 0;
+        text-shadow: none;
+        border: 2px solid #fff;
+        color: #color1;
+        text-align: center;
+        padding-bottom: 5px;
+        color: #c69000;
+        border-radius: 100px;
+        padding: 10px; }
+        #login form input[type="text"]:focus,
+        #login form input[type="password"]:focus {
+          color: #c69000;
+          outline: 0;
+          border: 2px solid #c69000; }
+        #login form input[type="text"]:hover,
+        #login form input[type="password"]:hover {
+          color: #c69000;
+          outline: 0; }
+      #login form p.forgetmenot {
+        display: block;
+        width: 100%;
+        float: left;
+        width: 50%; }
+        #login form p.forgetmenot label {
+          font-size: 12px; }
+      #login form p.submit {
+        display: block;
+        width: 100%;
+        float: right;
+        margin-top: -5px !important;
+        width: 150px; }
+        #login form p.submit input {
+          width: 100%;
+          padding: 10px !important;
+          height: auto !important;
+          background: transparent;
+          -webkit-box-shadow: none;
+                  box-shadow: none;
+          border: 0;
+          text-shadow: none;
+          background: #c69000;
+          color: #fff;
+          text-transform: uppercase;
+          border-radius: 100px; }
+          #login form p.submit input:hover {
+            background: #02900c; }
+    #login p#nav {
+      text-align: left !important;
+      float: left;
+      width: 50%;
+      margin: 10px 0;
+      padding: 0; }
+      #login p#nav a {
+        color: #c69000; }
+        #login p#nav a:hover {
+          color: #02900c; }
+    #login p#backtoblog {
+      text-align: center;
+      position: fixed;
+      top: 5px;
+      right: 5px;
+      display: block;
+      margin: 0;
+      padding: 0;
+      display: block; }
+      #login p#backtoblog a {
+        color: #fff;
+        background: #c69000;
+        padding: 10px;
+        display: block;
+        border-radius: 100px; }
+        #login p#backtoblog a:hover {
+          background: #02900c; }
+    #login p.message {
+      background: #c69000 !important;
+      border: 0 !important;
+      color: #fff;
+      text-align: center; }
+    #login form#lostpasswordform p {
+      width: 100% !important; } }

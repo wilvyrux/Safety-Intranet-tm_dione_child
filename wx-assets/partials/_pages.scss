@@ -892,6 +892,38 @@
 .mainboxgridbox-style2 {
     margin-bottom: 10px;
 
+    .thememove-menu {
+        ul {
+            padding: 20px 20px;
+
+            li {
+                line-height: 24px;
+
+                 &::before {
+                    content: "\f105";
+                    @include fontawesome;
+                    position: absolute;
+                    left: -20px;
+                    top: 3px;
+                    color: $color-primary;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: $color-secondary;
+
+
+                    &:hover {
+                        color:$color-primary;
+                    }
+                   
+                }
+
+            }
+        }
+    }
+
+
 // calendar icon oval
     .calendar-upcoming-events {
          table {

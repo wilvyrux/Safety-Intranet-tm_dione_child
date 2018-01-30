@@ -134,3 +134,31 @@
 //        @include fontawesome;
 //    }
 }
+
+
+
+
+
+.news-slider-holder {
+       .feature-image-news {
+         height: 250px;
+         overflow: hidden;
+       } 
+
+
+       .news-title {
+            background: $color-primary;
+            width: 90%;
+            margin: auto;
+            display: block;
+            text-align: center;
+            margin-top: -20px;
+            position: relative;
+            z-index: 2;
+            padding: 10px;
+            text-decoration: none;
+            color: $color-white;
+            text-transform: uppercase;
+        }
+
+}

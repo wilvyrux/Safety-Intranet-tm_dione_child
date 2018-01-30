@@ -1,5 +1,5 @@
 /***********************/
-//LOGIN CUSTOM - WILVYRUX  - STYLE 1
+//LOGIN CUSTOM - WILVYRUX  - STYLE 2
  /***********************/
 /***
 Date Employed : Sept 06, 2013
@@ -16,15 +16,15 @@ Skype: williamcarrascajr
 //CHANGE THIS COLORS 
 $color1: #fff;
 //TAB COLORS
-$color2: #f36a22;
-//HOVER TEXT COLOR
-$color2-ext: #b7460b;   
-//BACKGROUND OVERLAY COLOR
+$color2: #c69000;
+//HOVER EFFECTS
+$color2-ext: #02900c;   
 $transparent:rgba(0,0,0,.8);
+
 
 //ERROR BACKGROUND
 $error-background: transparent ;
-$error-color:#4caf50;
+$error-color:#f3b50d;
 
 //BACKGROUND & LOGO
 $background:  url('../custom-php/background.jpg')no-repeat;
@@ -33,8 +33,10 @@ $logo: url('../custom-php/logo.png')no-repeat center;
 /***********************************************************************/
 
 
+
+
 * {
-    -webkit-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease; 
 -moz-transition: all 0.3s ease;
 -ms-transition: all 0.3s ease;
 -o-transition: all 0.3s ease;
@@ -70,19 +72,15 @@ transition: all 0.3s ease;
 
 
 body.login {
-    background:$background !important;
+    background: $background !important;
     background-size:cover !important; 
     
-    @media only screen and (max-height:600px) {
-        background-size:inherit !important;  
-    }
-    
     &::before {
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: 100%;
     content: '';
-    background:$transparent;
+//    background: rgba(0,0,0,.8);
     }
     
 }
@@ -92,27 +90,51 @@ body.login {
     
     width:40%;
     padding:0;
-    height: 350px;
+    height: 100%;
     position: absolute;
-    top: 15%;
-//    bottom: 0;
-    margin: auto;
+   
+    top: 0;
     left: 0;
-    right: 0;
+    border-right: 1px dotted $color1;
+    background: $transparent;
+    padding: 0 35px;
     
+    form#loginform,
+    {
+        position: relative !important;
+        z-index: 10 !important;
+    }
     
-    @media only screen and (max-width:800px) {
+
+    
+    &:before {
+        position: absolute;
+        width: 95%;
+        height: 97%;
+        border: 1px solid $color1;
+        content: '';
+        left: 0;
         top: 0;
-        height: auto;
+        right: 0;
+        margin: auto;
+        bottom: 0;
+        z-index: 1;
+    }
+    
+    
+    h1,form,p#nav {
+        z-index: 2;
+        position: relative;
     }
     
     
     h1 {
         width: 100%;
         height: 130px;
-        background:$logo;
+        background: $logo !important;
         margin-bottom: 30px;
-        background-size:80%; 
+        margin-top: 25px;
+        background-size: 70% !important;
         
         a {
         display: none;
@@ -129,39 +151,34 @@ body.login {
         
         
         label {
-            font-size: 20px;
+            font-size: 15px;
             display: block !important;
-            text-align: center;
+            text-align: left;
             color:$color1;
-            margin-bottom: 15px;
-            
-            @media only screen and (max-width:800px) {
-                font-size: 1em;     
-            }
-            
-            
            
         }
         
         input[type="text"],
         input[type="password"]  { 
-            @include reset-all;
-            border-bottom: 3px solid $color1;
+            @include reset-all; 
+            border: 2px solid $color1;
             color: #color1;
             text-align: center;
             padding-bottom: 5px;
             color:$color2;
+//            @include border;
+            @include border(100px);
+            padding: 20px;
             
             &:focus {
             color:$color2;
             outline:0;
+            border: 2px solid $color2;
             }
           
             &:hover {
-            color:$color2-ext;
+            color:$color2;
             outline:0;
-            border-bottom:3px solid $color2-ext;
-                
             }
             
         }
@@ -169,6 +186,8 @@ body.login {
         p.forgetmenot {
             display: block;
             width: 100%;
+            float: left;
+            width: 50%;
             
             label {
                 font-size: 12px;
@@ -180,8 +199,9 @@ body.login {
         p.submit {
             display: block;
             width: 100%;
-            float: left;
-            margin-top: 12px !important;
+            float: right;
+            margin-top: -5px !important;
+            width: 150px;
             
             input {
                 width: 100%;
@@ -191,12 +211,11 @@ body.login {
                 background: $color2;
                 color:$color1;
                 text-transform: uppercase;
-                @include border(10px);
+                 @include border(100px);
                 
                 &:hover {
                     background: $color2-ext;
                 }
-                
                 
                 
             }
@@ -208,33 +227,64 @@ body.login {
     }
     
     p#nav {
-        text-align: center !important;
+        text-align: left !important;
+        float: left;
+        width: 50%;
+        margin: 10px 0;
+        padding: 0;
         
         a {
-            color:$color1;
+            color:$color2;
             
             &:hover {
                 color: $color2-ext;
             }
-            
+         
         }
     }
     
     p#backtoblog {
         text-align: center;
+        position: fixed;
+        top: 5px;
+        right: 5px;
+        display: block;
+        margin: 0;
+        padding: 0;
+        display: block;
+        
         
         a {
             color:$color1;
+            background: $color2;
+            padding: 10px;
+            display: block;
+            @include border(100px);
             
             &:hover {
-                color: $color2-ext;
+                background: $color2-ext;
             }
         }
     }
     
     
+    
+    p.message {
+        background: $color2 !important;
+        border: 0 !important;
+        color: $color1;
+        text-align: center;
+    }
+    
+    form#lostpasswordform {
+        p {
+            width: 100% !important;
+        }
+    }
+    
+    
+    
 }
-
 
 
 
@@ -251,6 +301,207 @@ body.login {
             display: none;
         }
     }
+    
+    #login {
+    
+    padding:0;
+    height: 100%;
+    position: absolute;
+   
+    top: 0;
+    left: 0;
+    border-right: 1px dotted $color1;
+    background: $transparent;
+    padding: 20px;
+    
+    form#loginform,
+    {
+        position: relative !important;
+        z-index: 10 !important;
+    }
+    
+
+    
+    &:before {
+        position: absolute;
+        width: 95%;
+        height: 97%;
+        border: 1px solid $color1;
+        content: '';
+        left: 0;
+        top: 0;
+        right: 0;
+        margin: auto;
+        bottom: 0;
+        z-index: 1;
+    }
+    
+    
+    h1,form,p#nav {
+        z-index: 2;
+        position: relative;
+    }
+    
+    
+    h1 {
+        width: 100%;
+        height: 80px;
+        background: $logo !important;
+        margin-bottom: 0;
+        margin-top: 25px;
+        background-size: contain !important;
+        
+        a {
+        display: none;
+        }
+        
+    }
+    
+    
+    
+    form {
+        background: transparent !important;
+        @include reset-all; 
+        @include reset-space;
+        
+        
+        label {
+            font-size: 15px;
+            display: block !important;
+            text-align: left;
+            color:$color1;
+           
+        }
+        
+        input[type="text"],
+        input[type="password"]  { 
+            @include reset-all; 
+            border: 2px solid $color1;
+            color: #color1;
+            text-align: center;
+            padding-bottom: 5px;
+            color:$color2;
+//            @include border;
+            @include border(100px);
+            padding: 10px;
+            
+            &:focus {
+            color:$color2;
+            outline:0;
+            border: 2px solid $color2;
+            }
+          
+            &:hover {
+            color:$color2;
+            outline:0;
+            }
+            
+        }
+        
+        p.forgetmenot {
+            display: block;
+            width: 100%;
+            float: left;
+            width: 50%;
+            
+            label {
+                font-size: 12px;
+            }
+        }
+       
+        
+//        BUTTONS
+        p.submit {
+            display: block;
+            width: 100%;
+            float: right;
+            margin-top: -5px !important;
+            width: 150px;
+            
+            input {
+                width: 100%;
+                padding: 10px !important;
+                height: auto !important;
+                @include reset-all;
+                background: $color2;
+                color:$color1;
+                text-transform: uppercase;
+                 @include border(100px);
+                
+                &:hover {
+                    background: $color2-ext;
+                }
+                
+                
+            }
+            
+        }
+        
+       
+        
+    }
+    
+    p#nav {
+        text-align: left !important;
+        float: left;
+        width: 50%;
+        margin: 10px 0;
+        padding: 0;
+        
+        a {
+            color:$color2;
+            
+            &:hover {
+                color: $color2-ext;
+            }
+         
+        }
+    }
+    
+    p#backtoblog {
+        text-align: center;
+        position: fixed;
+        top: 5px;
+        right: 5px;
+        display: block;
+        margin: 0;
+        padding: 0;
+        display: block;
+        
+        
+        a {
+            color:$color1;
+            background: $color2;
+            padding: 10px;
+            display: block;
+            @include border(100px);
+            
+            &:hover {
+                background: $color2-ext;
+            }
+        }
+    }
+    
+    
+    
+    p.message {
+        background: $color2 !important;
+        border: 0 !important;
+        color: $color1;
+        text-align: center;
+    }
+    
+    form#lostpasswordform {
+        p {
+            width: 100% !important;
+        }
+    }
+    
+    
+    
 }
-
-
+    
+    
+    
+    
+}
